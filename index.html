@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Design Playground</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;800&family=Work+Sans:wght@400;600&family=Inconsolata:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+      <div class="header">
+        <h1>Design Playground</h1>
+        <p>Customize your theme</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Theme Presets</div>
+        <div
+          class="theme-grid"
+          id="themeGrid"
+        ></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Colors</div>
+
+        <div class="control-group">
+          <label>Primary Color</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="colorPrimary"
+              value="#ff6b35"
+            >
+            <span
+              class="color-value"
+              id="colorPrimaryValue"
+            >#ff6b35</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Secondary Color</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="colorSecondary"
+              value="#004e89"
+            >
+            <span
+              class="color-value"
+              id="colorSecondaryValue"
+            >#004e89</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Border Color</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="borderColor"
+              value="#e0e0e0"
+            >
+            <span
+              class="color-value"
+              id="borderColorValue"
+            >#e0e0e0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Backgrounds</div>
+
+        <div class="control-group">
+          <label>Background 1</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="bg1"
+              value="#fafafa"
+            >
+            <span
+              class="color-value"
+              id="bg1Value"
+            >#fafafa</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Background 2</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="bg2"
+              value="#ffffff"
+            >
+            <span
+              class="color-value"
+              id="bg2Value"
+            >#ffffff</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Background Highlight</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="bgHighlight"
+              value="#fff5f0"
+            >
+            <span
+              class="color-value"
+              id="bgHighlightValue"
+            >#fff5f0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Text</div>
+
+        <div class="control-group">
+          <label>Text Color</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="textColor"
+              value="#0a0a0a"
+            >
+            <span
+              class="color-value"
+              id="textColorValue"
+            >#0a0a0a</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Title Color</label>
+          <div class="color-input-wrapper">
+            <input
+              type="color"
+              id="titleColor"
+              value="#1a1a1a"
+            >
+            <span
+              class="color-value"
+              id="titleColorValue"
+            >#1a1a1a</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Typography</div>
+
+        <div class="control-group">
+          <label>Normal Font</label>
+          <select id="fontNormal">
+            <option value="'DM Sans', sans-serif">DM Sans</option>
+            <option value="'Work Sans', sans-serif">Work Sans</option>
+            <option value="'Inter', sans-serif">Inter</option>
+            <option value="'Georgia', serif">Georgia</option>
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="system-ui, sans-serif">System UI</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>Title Font</label>
+          <select id="fontTitle">
+            <option value="'Syne', sans-serif">Syne</option>
+            <option value="'Playfair Display', serif">Playfair Display</option>
+            <option value="'Space Mono', monospace">Space Mono</option>
+            <option value="'Crimson Pro', serif">Crimson Pro</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>Font Size</label>
+          <span
+            class="range-value"
+            id="fontSizeValue"
+          >16px</span>
+          <input
+            type="range"
+            id="fontSize"
+            min="12"
+            max="24"
+            value="16"
+          >
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Borders & Effects</div>
+
+        <div class="control-group">
+          <label>Border Radius</label>
+          <span
+            class="range-value"
+            id="borderRadiusValue"
+          >16px</span>
+          <input
+            type="range"
+            id="borderRadius"
+            min="0"
+            max="32"
+            value="16"
+          >
+        </div>
+
+        <div class="control-group">
+          <label>Border Size</label>
+          <span
+            class="range-value"
+            id="borderSizeValue"
+          >2px</span>
+          <input
+            type="range"
+            id="borderSize"
+            min="0"
+            max="8"
+            value="2"
+          >
+        </div>
+
+        <div class="control-group">
+          <label>Box Shadow</label>
+          <span
+            class="range-value"
+            id="shadowIntensityValue"
+          >40px</span>
+          <input
+            type="range"
+            id="shadowIntensity"
+            min="0"
+            max="80"
+            value="40"
+          >
+        </div>
+      </div>
+
+      <div class="section">
+        <button
+          class="button primary"
+          onclick="saveTheme()"
+        >💾 Save Current Theme</button>
+        <button
+          class="button"
+          onclick="resetTheme()"
+        >🔄 Reset to Default</button>
+      </div>
+
+      <div class="section">
+        <div class="section-title">CSS Variables</div>
+        <div class="css-output">
+          <textarea
+            id="cssOutput"
+            readonly
+          ></textarea>
+          <button
+            class="copy-button"
+            onclick="copyCss()"
+          >📋 Copy CSS</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview Panel -->
+    <div class="preview-panel">
+      <div class="preview-content">
+        <div class="preview-section">
+          <h1 class="display-1">Display Heading 1</h1>
+          <h2 class="display-2">Display Heading 2</h2>
+          <h3 class="display-3">Display Heading 3</h3>
+
+          <p class="body-text">This is a body paragraph showcasing how your typography looks with the current settings. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Design is not just what it looks like and feels like — design is how it works.</p>
+
+          <p class="body-text text-secondary">This is secondary text, typically used for supporting information or captions. It has reduced visual weight to create hierarchy.</p>
+
+          <p class="body-text">Here's a <a href="#">link example</a> and some <span class="text-accent">accented text</span> to show interactive elements.</p>
+
+          <div style="display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap;">
+            <span style="padding: 8px 16px; background: var(--color-primary); color: white; border-radius: calc(var(--border-radius) / 2); font-size: 0.9rem; font-weight: 600;">Primary Badge</span>
+            <span style="padding: 8px 16px; background: var(--color-secondary); color: white; border-radius: calc(var(--border-radius) / 2); font-size: 0.9rem; font-weight: 600;">Secondary Badge</span>
+            <span style="padding: 8px 16px; border: var(--border-size) solid var(--color-secondary); color: var(--color-secondary); border-radius: calc(var(--border-radius) / 2); font-size: 0.9rem; font-weight: 600;">Secondary Outline</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">98%</div>
+              <div class="stat-label">Satisfaction</div>
+            </div>
+            <div class="stat-card">
+              <div
+                class="stat-value"
+                style="color: var(--color-secondary);"
+              >24/7</div>
+              <div class="stat-label">Availability</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">∞</div>
+              <div class="stat-label">Possibilities</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <h2 class="display-2">Interactive Elements</h2>
+
+          <input
+            type="text"
+            class="input-demo"
+            placeholder="Type something here..."
+          >
+
+          <div class="button-group">
+            <button class="btn-primary">Primary Button</button>
+            <button class="btn-secondary">Secondary Button</button>
+            <button class="btn-outline">Outline Button</button>
+          </div>
+
+          <div class="stats-grid">
+            <div class="card">
+              <h3 class="display-3">Card Component</h3>
+              <p class="body-text">This is a card with hover effects. Try hovering over it to see the interaction.</p>
+              <a href="#">Learn more →</a>
+            </div>
+
+            <div class="card">
+              <h3 class="display-3">Another Card</h3>
+              <p class="body-text text-secondary">Cards are perfect for organizing content into digestible chunks.</p>
+              <a href="#">Explore →</a>
+            </div>
+
+            <div class="card">
+              <h3 class="display-3">Third Card</h3>
+              <p class="body-text">Notice how the layout adapts and the design remains cohesive.</p>
+              <a href="#">Discover →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

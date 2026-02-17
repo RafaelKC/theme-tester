@@ -1,8 +1,8 @@
-# Design Playground
+# Theme Tester
 
 An interactive tool to test and export design system variables in real-time.
 
-![Design Playground](./assets/image.png)
+![Theme Tester](./assets/image.png)
 
 ## Features
 
@@ -34,4 +34,4 @@ An interactive tool to test and export design system variables in real-time.
 
 Pure HTML/CSS/JavaScript - no dependencies required.
 
-## Access [here](https://rafaelkc.github.io/theme-tester/),
+ Access [here](https://rafaelkc.github.io/theme-tester/).
